@@ -1,0 +1,78 @@
+.placeholder {
+  display       : flex;
+  align-items   : center;
+  position      : absolute;
+  top           : 50%;
+  left          : 15px;
+  line-height   : 1;
+  opacity       : 0.5;
+  transform     : translateY(-50%);
+  transition    : top .2s ease, font-size .2s ease;
+  pointer-events: none;
+}
+
+.fieldset {
+  position      : absolute;
+  inset         : 0;
+  height        : auto !important;
+  padding-left  : 10px !important;
+  pointer-events: none;
+
+  &.with-placeholder {
+    inset: -0.5em 0 0;
+  }
+}
+
+
+.legend {
+  max-width  : 0px;
+  overflow   : hidden;
+  white-space: nowrap;
+  visibility : hidden;
+}
+
+.field {
+
+  &:not(.inactive) :is(input, select):not(:placeholder-shown)~.placeholder,
+  &:not(.inactive) &.active .placeholder,
+  &:focus-within .placeholder {
+    top      : calc(0% - 2px);
+    font-size: 14px;
+    opacity  : .6;
+  }
+
+  &:not(.inactive) :is(input, select):not(:placeholder-shown)~.fieldset .legend,
+  &:not(.inactive) &.active .legend,
+  &:focus-within .legend {
+    max-width    : 100%;
+    padding-right: 5px;
+    padding-left : 5px;
+    font-size    : 14px;
+  }
+
+  &:not(.inactive) &.active .fieldset,
+  &:focus-within .fieldset {
+    border-width: 2px;
+    border-color: var(--tw-input-color);
+    z-index     : 2;
+  }
+
+
+  &:not(.inactive) &.active .placeholder,
+  &:focus-within .placeholder {
+    color  : var(--tw-input-color);
+    opacity: 1 !important;
+  }
+
+  .input {
+    box-shadow: none;
+  }
+
+  &.inactive :is(input, select) {
+    color: rgba(0, 0, 0, 0);
+
+    option {
+      color: #000;
+    }
+  }
+}

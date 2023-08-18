@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './assets/scss/Ripple.scss';
+@import './assets/scss/Container.scss';
+
+@layer components {
+  .input {
+    border-radius: 8px;
+  }
+
+  :is(.btn-fill, .btn-light, .btn-whitebg, .btn-contur, .btn-default) {
+    border-radius: 8px;
+    font-size    : 18px;
+    font-weight  : 500;
+
+
+  }
+}

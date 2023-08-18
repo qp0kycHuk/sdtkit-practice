@@ -1,0 +1,1 @@
+type EntityId = string | number
