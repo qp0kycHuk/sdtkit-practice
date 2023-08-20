@@ -24,9 +24,9 @@
 }
 
 .wrapper {
-  padding              : 100px 15px;
-  background           : linear-gradient(180deg, #FFF 20.00%, #E4E8F8 100%);
-  background-attachment: fixed;
+  padding                 : 100px 15px;
+  // background           : linear-gradient(180deg, #FFF 20.00%, #E4E8F8 100%);
+  background-attachment   : fixed;
 
   @media (max-width:theme('screens.sm')) {
     padding: 40px 15px;
