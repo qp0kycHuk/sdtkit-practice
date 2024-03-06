@@ -1,8 +1,6 @@
 import React from 'react'
-import classnames from 'classnames'
 import type { Color, Size } from '../types'
-
-const baseClassName = 'input'
+import { twMerge } from 'tailwind-merge'
 
 const colorClassNames: PartialRecord<Color, string> = {
   white: 'input-white',
@@ -11,7 +9,6 @@ const colorClassNames: PartialRecord<Color, string> = {
   yellow: 'input-yellow',
   primary: 'input-primary',
   red: 'input-red',
-  gray: 'input-gray',
 }
 
 const sizeClassNames: PartialRecord<Size, string> = {
@@ -22,7 +19,7 @@ const sizeClassNames: PartialRecord<Size, string> = {
 }
 
 function InputComponent(
-  { color = 'primary', size, type = 'text', className, ...props }: InputProps,
+  { color, size, type = 'text', className, ...props }: InputProps,
   ref: InputRef
 ) {
   const classNames = getInputClassname({ color, size, className })
@@ -31,8 +28,8 @@ function InputComponent(
 }
 
 export function getInputClassname({ color = 'primary', size, className }: InputProps) {
-  return classnames(
-    baseClassName,
+  return twMerge(
+    'input',
     color ? colorClassNames[color] : null,
     size ? sizeClassNames[size] : null,
     className

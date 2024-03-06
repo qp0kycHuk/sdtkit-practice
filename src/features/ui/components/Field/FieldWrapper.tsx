@@ -2,6 +2,7 @@ import classnames from 'classnames'
 import classes from './Field.module.scss'
 import { Input, IProps, getInputClassname } from '../Input'
 import { ComponentProps } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export function FieldWrapper({
   color = 'primary',
@@ -16,7 +17,7 @@ export function FieldWrapper({
 }: IFieldWrapperProps) {
   return (
     <label
-      className={classnames(
+      className={twMerge(
         classes.field,
         'block relative ',
         className,

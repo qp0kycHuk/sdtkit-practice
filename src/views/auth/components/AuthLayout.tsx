@@ -8,7 +8,7 @@ export function AuthLayout() {
   return (
     <>
       <div className="fixed inset-0 pointer-events-none">
-        <video
+        {/* <video
           autoPlay
           muted
           loop
@@ -17,7 +17,12 @@ export function AuthLayout() {
         >
           <source src="/media/auth-background.webm" type="video/webm" />
           <source src="/media/auth-background.mp4" type="video/mp4" />
-        </video>
+        </video> */}
+        <img
+          src="/media/auth-background.jpg"
+          alt=""
+          className="absolute top-0 left-0 object-cover w-full h-full"
+        />
       </div>
       <div
         className={classnames(

@@ -39,7 +39,7 @@ export function Login() {
           to="/registration"
           variant="text"
           color="gray"
-          className="inline font-medium underline decoration-from-font underline-offset-4"
+          className="inline font-medium underline decoration-from-font underline-offset-4 decoration-dashed decoration-default/40"
         >
           Зарегистрируйтесь!
         </Button>

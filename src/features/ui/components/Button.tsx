@@ -1,10 +1,8 @@
 import React from 'react'
-import classnames from 'classnames'
 import { ripplePointerdownHandler } from '../utils/ripple'
 import type { Color, Size } from '../types'
 import BaseButton, { BaseComponentProps, BaseComponent } from './Base'
-
-const baseClassName = 'btn'
+import { twMerge } from 'tailwind-merge'
 
 const variantClassNames: Record<Variant, string> = {
   fill: 'btn-fill',
@@ -22,7 +20,8 @@ const colorClassNames: PartialRecord<Color, string> = {
   yellow: 'btn-yellow',
   primary: 'btn-primary',
   red: 'btn-red',
-  gray: 'btn-gray',
+  blue: 'btn-blue',
+  default: 'btn-default',
 }
 
 const sizeClassNames: PartialRecord<Size, string> = {
@@ -44,8 +43,8 @@ function ButtonComponent<C extends BaseComponent = 'button'>(
   }: ButtonProps<C>,
   ref: ButtonRef
 ) {
-  const classNames = classnames(
-    baseClassName,
+  const classNames = twMerge(
+    'btn',
     color ? colorClassNames[color] : null,
     size ? sizeClassNames[size] : null,
     variant ? variantClassNames[variant] : null,

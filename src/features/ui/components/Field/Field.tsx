@@ -1,8 +1,7 @@
-import classnames from 'classnames'
-import classes from './Field.module.scss'
-import { Input, IProps, getInputClassname } from '../Input'
+import { Input, IProps } from '../Input'
 import { ComponentProps } from 'react'
 import { FieldWrapper } from './FieldWrapper'
+import { twMerge } from 'tailwind-merge'
 
 export function Field({ inputProps = {}, ...props }: IFieldProps) {
   return (
@@ -11,7 +10,7 @@ export function Field({ inputProps = {}, ...props }: IFieldProps) {
       input={
         <Input
           {...inputProps}
-          className={classnames('w-full border-none focus:shadow-none', inputProps.className)}
+          className={twMerge('w-full border-none focus:shadow-none', inputProps.className)}
         />
       }
     ></FieldWrapper>

@@ -1,4 +1,4 @@
-import { AuthLayout, Registration, Login } from '@features/auth'
+import { AuthLayout, Registration, Login } from '@/views/auth'
 import { MainLayout } from '@layouts/MainLayout'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 

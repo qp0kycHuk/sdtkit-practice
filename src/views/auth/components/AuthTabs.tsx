@@ -4,7 +4,7 @@ import { useState } from 'react'
 export function AuthTabs() {
   const [tab, setTab] = useState<'student' | 'admin'>('student')
   return (
-    <div className="grid grid-cols-2 rounded-lg  border border-gray border-opacity-20">
+    <div className="grid grid-cols-2 rounded-lg  border border-default/20">
       <Button
         onClick={() => setTab('student')}
         className="rounded-e-none"
