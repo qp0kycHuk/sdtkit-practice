@@ -34,8 +34,13 @@ export function getMaskedPhoneValue(value: string | number = ''): string {
     return ''
   }
 
-  const maskedValue = `+7${matchValue[2] ? ` (${matchValue[2]}` : ''}${matchValue[3] ? `) ${matchValue[3]}` : ''}${matchValue[4] ? ` - ${matchValue[4]}` : ''}${
-    matchValue[5] ? ` - ${matchValue[5]}` : ''
+  const a = matchValue[2]
+  const b = matchValue[3]
+  const c = matchValue[4]
+  const d = matchValue[5]
+  // +7 (aaa) bbb - cc - dd
+  const maskedValue = `+7${a ? ` (${a}` : ''}${b ? `) ${b}` : ''}${c ? ` - ${c}` : ''}${
+    d ? ` - ${d}` : ''
   }`
 
   return maskedValue

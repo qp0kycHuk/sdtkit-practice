@@ -62,7 +62,7 @@ export function FieldCombobox({ options, inputProps, ...props }: IComboboxProps)
                     <Button
                       variant={active ? 'light' : 'none'}
                       key={option}
-                      className="text-left  h-auto rounded-none text-sm px-4 py-2 justify-start"
+                      className="text-left h-auto rounded-none text-sm px-4 py-2 justify-start"
                     >
                       {option}
                     </Button>
