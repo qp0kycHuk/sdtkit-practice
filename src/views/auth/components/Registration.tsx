@@ -38,21 +38,21 @@ export function Registration() {
           ...register('login', { required: 'Input is required' }),
           required: true,
         }}
-      ></PhoneField>
+      />
       <Field
         placeholder="Фамилия"
         inputProps={{
           ...register('sirname', { required: 'Input is required' }),
           required: true,
         }}
-      ></Field>
+      />
       <Field
         placeholder="Имя"
         inputProps={{
           ...register('name', { required: 'Input is required' }),
           required: true,
         }}
-      ></Field>
+      />
 
       <Select
         inputProps={{
@@ -70,7 +70,7 @@ export function Registration() {
           ...register('email', { required: 'Input is required' }),
           required: true,
         }}
-      ></Field>
+      />
 
       <div className="flex items-center">
         <div className="text-xl font-semibold">Университет</div>
@@ -83,10 +83,10 @@ export function Registration() {
           ...register('university', { required: 'Input is required' }),
           required: true,
         }}
-      ></FieldCombobox>
-      <Field placeholder="Факультет"></Field>
-      <Field placeholder="Курс"></Field>
-      <Field placeholder="Группа"></Field>
+      />
+      <Field placeholder="Факультет" />
+      <Field placeholder="Курс" />
+      <Field placeholder="Группа" />
 
       <div className="flex items-center">
         <div className="text-xl font-semibold">Пароль</div>
@@ -98,16 +98,16 @@ export function Registration() {
           ...register('password', { required: 'Input is required' }),
           required: true,
         }}
-      ></PasswordField>
+      />
       <PasswordField
         placeholder="Повторите пароль"
         inputProps={{
           ...register('password_repeat', { required: 'Input is required' }),
           required: true,
         }}
-      ></PasswordField>
+      />
 
-      <Button type="submit">Войти</Button>
+      <Button type="submit">Зарегистрироваться</Button>
 
       <div className="text-center">
         Есть аккаунт?{' '}

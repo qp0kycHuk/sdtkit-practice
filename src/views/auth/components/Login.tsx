@@ -21,14 +21,14 @@ export function Login() {
           ...register('login', { required: 'Input is required' }),
           required: true,
         }}
-      ></PhoneField>
+      />
       <PasswordField
         placeholder="Пароль"
         inputProps={{
           ...register('password', { required: 'Input is required' }),
           required: true,
         }}
-      ></PasswordField>
+      />
 
       <Button type="submit">Войти</Button>
 

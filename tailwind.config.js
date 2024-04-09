@@ -1,4 +1,3 @@
-const tailwindButtonPlugin = require('@qpokychuk/tailwind-button-plugin')
 const { ui } = require('./src/features/ui/config.ts')
 
 /** @type {import('tailwindcss').Config} */
@@ -30,9 +29,14 @@ export default {
     },
   },
   plugins: [
-    tailwindButtonPlugin({
+    require('@qpokychuk/tailwind-button-plugin')({
       withFocusStyles: false,
     }),
-    require('./tailwind.input.js'),
+    require('@qpokychuk/tailwind-input-plugin')({
+      border: "1px solid theme('colors.default / 40%')",
+    }),
+    require('@qpokychuk/tailwind-checkbox-plugin')({
+      border: "1px solid theme('colors.default / 40%')",
+    }),
   ],
 }
